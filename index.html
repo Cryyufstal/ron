@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة تعدين العملات الرقمية</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e2d;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            margin: 50px auto;
+            padding: 20px;
+            max-width: 600px;
+            background-color: #2b2b3b;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #00ff99;
+            font-size: 2.5rem;
+        }
+
+        p {
+            margin: 15px 0;
+            font-size: 1.2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            font-size: 1.2rem;
+            color: #ffffff;
+            background-color: #00cc66;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #009955;
+        }
+
+        #status {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>منصة تعدين العملات الرقمية</h1>
+        <p>ابدأ بتعدين العملات الرقمية باستخدام أجهزتك الآن!</p>
+        <button class="btn" onclick="startMining()">ابدأ التعدين</button>
+        <div id="status">لم يتم بدء التعدين بعد.</div>
+    </div>
+
+    <script>
+        function startMining() {
+            const statusDiv = document.getElementById("status");
+            statusDiv.textContent = "جارٍ بدء عملية التعدين...";
+
+            // كود التعدين يمكن إضافته هنا (JavaScript أو WebAssembly)
+            setTimeout(() => {
+                statusDiv.textContent = "التعدين قيد التشغيل... يتم جمع العملات!";
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
